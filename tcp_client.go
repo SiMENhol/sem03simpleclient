@@ -18,9 +18,7 @@ func main() {
 	log.Println("Kryptert melding: ", string(kryptertMelding))
 	_, err = conn.Write([]byte(string(kryptertMelding)))
 	log.Println("os.Args[1] = ", os.Args[1])
-}
 
-/*
 	_, err = conn.Write([]byte(os.Args[1]))
 	if err != nil {
 		log.Fatal(err)
@@ -33,4 +31,3 @@ func main() {
 	response := string(buf[:n])
 	log.Printf("reply from proxy: %s", response)
 }
-*/
