@@ -17,7 +17,6 @@ func main() {
 	log.Println("os.Args[1] = ", os.Args[1])
 
 	kryptertMelding := mycrypt.Krypter([]rune(os.Args[1]), mycrypt.ALF_SEM03, 4)
-	//log.Println("Kryptert melding: ", string(kryptertMelding))
 
 	_, err = conn.Write([]byte(string(kryptertMelding)))
 	if err != nil {
@@ -32,11 +31,3 @@ func main() {
 	log.Printf("reply from proxy: %s", response)
 
 }
-
-/*
-
-	dekryptertMelding := mycrypt.Krypter([]rune(string(buf[:n])), mycrypt.ALF_SEM03, len(mycrypt.ALF_SEM03)-4)
-	log.Println("Dekryptert melding: ", string(dekryptertMelding))
-
-}
-*/
